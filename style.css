@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+body {
+  font-size: 93.75%;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+*, * * {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  text-align: center;
+  max-width: 545px;
+  margin: 0 auto;
+  padding: 2em 2em 0 2em;
+}
+.intro h1 {
+  color: #4c4e61;
+}
+.intro span {
+  display: block;
+  font-weight: 200;
+}
+.intro p {
+  color: #a3a5ae;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". two ." "one two four" "one three four" ". three .";
+  gap: 2em;
+  padding: 2em 4em;
+  width: min(100%, 1300px);
+  margin: 0 auto;
+}
+
+@media (max-width: 840px) {
+  .intro h1 {
+    font-size: 1.5em;
+  }
+
+  .tools {
+    display: block;
+    max-width: 545px;
+    margin: 0 auto;
+    padding: 2em;
+  }
+  .tools > div:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+.four, .three, .two, .one {
+  padding: 2em 2em calc(64px + 1.5em) 2em;
+  background-color: white;
+  box-shadow: 0px 1px 12px 1px rgba(163, 165, 174, 0.3);
+}
+.four dt, .three dt, .two dt, .one dt {
+  font-weight: bold;
+  font-size: larger;
+  color: #4c4e61;
+  margin-bottom: 0.5em;
+}
+.four dd, .three dd, .two dd, .one dd {
+  font-size: 0.9em;
+  margin-left: 0;
+  margin-bottom: 2em;
+  color: #a3a5ae;
+}
+
+.one {
+  grid-area: one;
+  border-top: 4px solid #45d3d3;
+  border-radius: 4px;
+  position: relative;
+}
+.one::after {
+  content: url("../images/icon-supervisor.svg");
+  position: absolute;
+  right: 2em;
+}
+
+.two {
+  grid-area: two;
+  border-top: 4px solid #ea5353;
+  border-radius: 4px;
+  position: relative;
+}
+.two::after {
+  content: url("../images/icon-team-builder.svg");
+  position: absolute;
+  right: 2em;
+}
+
+.three {
+  grid-area: three;
+  border-top: 4px solid #fcaf4a;
+  border-radius: 4px;
+  position: relative;
+}
+.three::after {
+  content: url("../images/icon-karma.svg");
+  position: absolute;
+  right: 2em;
+}
+
+.four {
+  grid-area: four;
+  border-top: 4px solid #549ef2;
+  border-radius: 4px;
+  position: relative;
+}
+.four::after {
+  content: url("../images/icon-calculator.svg");
+  position: absolute;
+  right: 2em;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/*# sourceMappingURL=style.css.map */
